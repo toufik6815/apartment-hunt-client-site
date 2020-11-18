@@ -1,23 +1,48 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import BookingData from './Components/BookingList/BookingData/BookingData';
+import AddHows from './Components/AddHows/AddHows/AddHows';
+import MyRentData from './Components/MyRent/MyRentData/MyRentData';
+import Sidebar from './Components/ShareComponents/Sidebar/Sidebar';
+import Home from './Components/Home/Home/Home';
+import ApartmentDetail from './Components/Home/ApartmentDetail/ApartmentDetail/ApartmentDetail';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Switch>
+
+          <Route exact path='/'>
+              <Home />
+          </Route>
+
+          <Route path='/sidebar'>
+              <Sidebar></Sidebar>
+          </Route>
+
+          <Route path='/booking'>
+              <BookingData></BookingData>
+          </Route>
+
+          <Route path='/addHows'>
+              <AddHows></AddHows>
+          </Route>
+
+          <Route path='/myRent'>
+              <MyRentData></MyRentData>
+          </Route>
+
+          <Route path='/room/:apartment'>
+              <ApartmentDetail></ApartmentDetail>
+          </Route>
+
+        </Switch>
+      </Router>
     </div>
   );
 }

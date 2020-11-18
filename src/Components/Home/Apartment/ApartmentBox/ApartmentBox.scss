@@ -1,0 +1,62 @@
+.apartment_box_container{
+    padding: 10px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    img{
+        width: 100%;
+    }
+    .box{
+        background: #fff;
+    }
+    .box_body{
+        padding: 0 10px;
+        h5{
+            color: #16322E;
+            font-weight: 600;
+            font-size: 24px;
+            margin: 15px 0;
+            text-align: left;
+        }
+        p{
+            color: #16322E;
+            font-weight: 400;
+            font-size: 17px;
+            margin: 15px 0;
+            text-align: left;
+        }
+    }
+
+    .roomNo{
+        padding: 0 10px;
+        span{
+            text-align: left;
+            color: #16322E;
+            margin: 10px 0;
+        }
+    }
+    .price{
+        padding: 0 10px;
+        span{
+            color: #16322E; 
+            margin: 5px 0;
+        } 
+        button{
+            padding: 8px 10px;
+            border: none;
+            background: #275A53;
+            color: #F1F6F4;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+        }
+    }
+
+    i{
+        margin-right: 7px;
+    }
+}
